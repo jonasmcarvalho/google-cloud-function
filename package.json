@@ -1,0 +1,17 @@
+{
+  "name": "teste",
+  "version": "1.0.0",
+  "description": "teste_function_framework",
+  "main": "index.js",
+  "author": "Jonas",
+  "license": "MIT",
+  "scripts": {
+    "start": "functions-framework --target=main",
+    "dev": "functions-framework --target=main --debug"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.1.2",
+    "axios": "^0.27.2",
+    "googleapis": "39"
+  }
+}
