@@ -14,15 +14,19 @@ const fetch =require('node-fetch');
     })
   }  
 
-  const url = `https://southamerica-east1-valiant-carrier-357523.cloudfunctions.net/function-1`;
+  const url = `http://0.0.0.0:8080`;
 
-  (async () => {
-    try {
-      const response = await fetch(url, json)
-      const finalRespose = await response.text()
-      console.log(finalRespose);
-    } catch (error) {
-      console.log(error);
-    }
-  })() 
+  // for(i=0; i<60; i++) {
+    (async () => {
+      try {
+        const response = await fetch(url, json)
+        const finalRespose = await response.text()
+        console.log(finalRespose);
+      } catch (error) {
+        console.log(error);
+      }
+    })() 
+  // }
 
+
+  

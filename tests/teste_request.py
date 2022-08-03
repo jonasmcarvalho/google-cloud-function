@@ -2,29 +2,21 @@ import json
 import requests
 
 data = {
-    'cep': 15960000
+    'cep': '15804-145'
 }
 
 header = {
     'Content-Type': 'application/json'
 }
 
-dado = './teste.json'
-
-f = open(dado)
-
-fe = f.read()
-
-fa = json.dumps(fe)
+fa = json.dumps(data)
 
 print(fa)
 
-# url = 'http://0.0.0.0:8080'
-url_cloud = 'https://southamerica-east1-valiant-carrier-357523.cloudfunctions.net/function-1'
+url_cloud = 'http://0.0.0.0:8080'
 
-# response = requests.get(url, headers=None, json=data)
-response_cloud = requests.get(url_cloud, headers=header, json=fa)
+# for index in range(60):
 
-# print(response.text)
+response_cloud = requests.post(url_cloud, headers=header, data=fa)
+
 print(response_cloud.text)
-# print(response.status_code)
