@@ -1,9 +1,14 @@
 import { BigQuery } from "@google-cloud/bigquery";
 
-const bqClient = new BigQuery()
+const credentials = {
+    keyFilename: './credentials/bigQuery.json',
+    projectId: 'your-project'
+}
+
+const bqClient = new BigQuery(credentials)
 
 const query = `
-    SELECT * FROM your-project.yourdata.yourtable
+    SELECT * FROM your-project.your-data.your-table
 `
 
 const options = {
